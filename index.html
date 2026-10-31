@@ -1,0 +1,1714 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Duncan Nasasira - Mathematics and ICT educator, computer laboratory attendant and technology enthusiast.">
+
+    <title>Duncan Nasasira | Professional Portfolio</title>
+
+    <style>
+
+        /* =====================================
+           1. GLOBAL WEBSITE STYLING
+        ===================================== */
+
+        :root {
+            --navy: #123B5D;
+            --teal: #0D9488;
+            --ink: #203E58;
+            --muted: #50677D;
+            --pale: #EAF4FB;
+            --white: #FFFFFF;
+            --shadow: 0 8px 24px rgba(18, 59, 93, 0.09);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        body {
+            margin: 0;
+            background: #F0F7FC;
+            color: var(--ink);
+            font: 15px/1.65 Arial, Helvetica, sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-top: 0;
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.25;
+            color: var(--navy);
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 32px));
+            margin: auto;
+        }
+
+        .section {
+            padding: 28px 0;
+        }
+
+        .section-title {
+            font-size: 27px;
+            margin: 0 0 18px;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 62px;
+            height: 4px;
+            background: var(--teal);
+            border-radius: 9px;
+            margin-top: 8px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        /* =====================================
+           2. HEADER AND NAVIGATION
+        ===================================== */
+
+        header {
+            background: var(--navy);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 16px rgba(18, 59, 93, 0.15);
+        }
+
+        .nav {
+            min-height: 73px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+        }
+
+        .brand-mark {
+            width: 51px;
+            height: 51px;
+            display: grid;
+            place-items: center;
+            border-radius: 11px;
+            background: #E6F8F7;
+            color: var(--teal);
+            font-weight: 900;
+            font-size: 23px;
+        }
+
+        .brand strong {
+            display: block;
+            font-size: 19px;
+            line-height: 1.2;
+        }
+
+        .brand small {
+            display: block;
+            color: #B4E6E6;
+            font-size: 10px;
+            letter-spacing: 1.2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            color: white;
+            padding: 9px 12px;
+            border-radius: 7px;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            background: var(--teal);
+        }
+
+        .menu-button {
+            display: none;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            background: transparent;
+            padding: 6px 12px;
+            font-size: 23px;
+            cursor: pointer;
+        }
+
+        /* =====================================
+           3. WELCOME / HERO SECTION
+        ===================================== */
+
+        .hero {
+            background: linear-gradient(
+                120deg,
+                #F5FBFF,
+                #E2F1FC
+            );
+            padding: 43px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.85fr 0.55fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            background: #CCEBF1;
+            color: #065A79;
+            border-radius: 30px;
+            padding: 6px 13px;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: clamp(29px, 3.2vw, 42px);
+            margin-bottom: 4px;
+        }
+
+        .hero h2 {
+            font-size: clamp(26px, 3vw, 37px);
+            color: var(--teal);
+            margin-bottom: 9px;
+        }
+
+        .hero h3 {
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 19px;
+        }
+
+        .button {
+            background: var(--teal);
+            color: white;
+            border-radius: 6px;
+            padding: 11px 17px;
+            font-weight: bold;
+            font-size: 13px;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: var(--navy);
+        }
+
+        .button.secondary {
+            background: white;
+            border: 1px solid var(--teal);
+            color: var(--navy);
+        }
+
+        .button.secondary:hover {
+            background: var(--navy);
+            color: white;
+        }
+
+        .hero-portrait {
+            width: 100%;
+            max-width: 310px;
+            aspect-ratio: 1;
+            object-fit: cover;
+            object-position: center 22%;
+            border-radius: 50%;
+            border: 6px solid white;
+            outline: 3px solid var(--teal);
+            box-shadow: 0 15px 28px rgba(18, 59, 93, 0.16);
+            margin: auto;
+        }
+
+        .highlights {
+            display: grid;
+            gap: 25px;
+        }
+
+        .highlight {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .highlight-icon {
+            display: grid;
+            place-items: center;
+            width: 49px;
+            height: 49px;
+            border-radius: 13px;
+            background: #D3F3F5;
+            font-size: 23px;
+            flex-shrink: 0;
+        }
+
+        .highlight strong {
+            display: block;
+            color: var(--navy);
+        }
+
+        .highlight small {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        /* =====================================
+           4. ABOUT ME SECTION
+        ===================================== */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 24px;
+            padding: 20px;
+            align-items: stretch;
+        }
+
+        .about-photo {
+            width: 100%;
+            height: 100%;
+            max-height: 440px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+        }
+
+        .about-copy p {
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+
+        .interest-panel {
+            background: #E8F8F8;
+            padding: 16px;
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+
+        .interest-panel h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .interests {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .interests span {
+            font-size: 13px;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+        }
+
+        /* =====================================
+           5. CAREER GOALS SECTION
+        ===================================== */
+
+        .goals {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .goal {
+            padding: 19px;
+            border-left: 4px solid var(--teal);
+        }
+
+        .goal:nth-child(2) {
+            border-color: #1F9AF3;
+        }
+
+        .goal:nth-child(3) {
+            border-color: #00A4BD;
+        }
+
+        .goal:nth-child(4) {
+            border-color: #8B5CF6;
+        }
+
+        .goal .symbol,
+        .skill .symbol {
+            font-size: 25px;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .goal h3 {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .goal p {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.55;
+            margin-bottom: 0;
+        }
+
+        /* =====================================
+           6. SKILLS SECTION
+        ===================================== */
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .skill {
+            padding: 18px;
+            min-width: 0;
+        }
+
+        .skill h3 {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .skill p {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.55;
+            margin-bottom: 0;
+        }
+
+        /* =====================================
+           7. PROJECTS SECTION
+        ===================================== */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .project {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .project img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 9px;
+            background: #E5EDF5;
+        }
+
+        .project h3 {
+            font-size: 16px;
+            margin: 12px 0 7px;
+        }
+
+        .project p {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.55;
+            margin-bottom: 0;
+            flex: 1;
+        }
+
+        .status {
+            align-self: flex-start;
+            margin-top: 13px;
+            padding: 5px 13px;
+            border-radius: 20px;
+            background: #D4F6EC;
+            color: #05796E;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .status.planned {
+            background: #FFF0BE;
+            color: #8B6400;
+        }
+
+        .project-placeholder {
+            height: 170px;
+            border-radius: 9px;
+            background: linear-gradient(
+                135deg,
+                #E5F6FC,
+                #D9EEE9
+            );
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: var(--navy);
+            padding: 15px;
+        }
+
+        .project-placeholder .symbol {
+            font-size: 50px;
+            display: block;
+        }
+
+        /* =====================================
+           8. CONTACT ME SECTION
+        ===================================== */
+
+        .contact-intro {
+            text-align: center;
+            color: var(--muted);
+            margin-top: -8px;
+            margin-bottom: 20px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .contact-box {
+            padding: 25px;
+            min-width: 0;
+        }
+
+        .contact-box h3 {
+            font-size: 19px;
+        }
+
+        .contact-row {
+            display: flex;
+            gap: 13px;
+            margin: 14px 0;
+        }
+
+        .contact-row .symbol {
+            font-size: 21px;
+        }
+
+        .contact-row strong {
+            display: block;
+            font-size: 13px;
+        }
+
+        .contact-row a {
+            color: #07877C;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-row a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-row p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        form {
+            display: grid;
+            gap: 8px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            border: 1px solid #C9D9E4;
+            border-radius: 7px;
+            padding: 11px;
+            background: #FAFCFF;
+            color: var(--ink);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 105px;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: 2px solid rgba(13, 148, 136, 0.4);
+            border-color: var(--teal);
+        }
+
+        form button {
+            background: var(--teal);
+            border: 0;
+            color: white;
+            border-radius: 7px;
+            padding: 12px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        form button:hover {
+            background: var(--navy);
+        }
+
+        .note {
+            font-size: 12px;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        /* =====================================
+           9. FOOTER
+        ===================================== */
+
+        footer {
+            background: var(--navy);
+            color: #D8E7F0;
+            margin-top: 28px;
+            padding: 23px 0;
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .footer-grid strong {
+            color: white;
+        }
+
+        .footer-grid small {
+            display: block;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+        }
+
+        .footer-links a:hover {
+            color: #67E2D4;
+        }
+
+        /* =====================================
+           10. TABLET RESPONSIVENESS
+        ===================================== */
+
+        @media (max-width: 1050px) {
+
+            .hero-grid {
+                grid-template-columns: 1.2fr 0.8fr;
+            }
+
+            .highlights {
+                grid-column: 1 / -1;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .skills {
+                grid-template-columns:
+                    repeat(3, minmax(0, 1fr));
+            }
+
+            .goals {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+        /* =====================================
+           11. SMALL TABLETS AND MOBILE MENU
+        ===================================== */
+
+        @media (max-width: 800px) {
+
+            .menu-button {
+                display: block;
+            }
+
+            .nav {
+                flex-wrap: wrap;
+                padding: 10px 0;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 8px 0;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-text {
+                grid-column: 1 / -1;
+            }
+
+            .hero-portrait {
+                max-width: 250px;
+            }
+
+            .highlights {
+                grid-column: auto;
+                display: grid;
+                gap: 14px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-photo {
+                max-height: 500px;
+                object-position: center 35%;
+            }
+
+            .projects {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        /* =====================================
+           12. MOBILE PHONES
+        ===================================== */
+
+        @media (max-width: 560px) {
+
+            .container {
+                width: min(1180px, calc(100% - 24px));
+            }
+
+            .hero {
+                padding: 28px 0;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text {
+                grid-column: auto;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .hero-portrait {
+                max-width: 235px;
+            }
+
+            .highlights {
+                grid-column: auto;
+                grid-template-columns: 1fr;
+                text-align: left;
+                width: max-content;
+                max-width: 100%;
+                margin: auto;
+            }
+
+            .about-grid {
+                padding: 13px;
+            }
+
+            .about-photo {
+                max-height: 390px;
+            }
+
+            .interests {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+            .goals,
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .skills {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+            .skill {
+                padding: 14px;
+            }
+
+            .contact-box {
+                padding: 18px;
+            }
+
+            .footer-grid {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+
+        }
+
+        @media (max-width: 360px) {
+
+            .skills,
+            .interests {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================
+         HEADER AND LOGO
+    ===================================== -->
+
+    <header>
+
+        <nav class="nav container"
+             aria-label="Main navigation">
+
+            <a class="brand" href="#home">
+
+                <span class="brand-mark">
+                    <img src="images/portfolio_logo.png">
+                </span>
+
+                <span>
+                    <strong>Duncan Nasasira</strong>
+                    <small>PROFESSIONAL PORTFOLIO</small>
+                </span>
+
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="navLinks">
+                &#9776;
+            </button>
+
+            <div class="nav-links" id="navLinks">
+
+                <a href="#home">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#goals">Career Goals</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact Me</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- =====================================
+             HOME / WELCOME SECTION
+        ===================================== -->
+
+        <section class="hero" id="home">
+
+            <div class="container hero-grid">
+
+                <div class="hero-text">
+
+                    <span class="eyebrow">
+                        EDUCATION • TECHNOLOGY • INNOVATION
+                    </span>
+
+                    <h1>Welcome to My Portfolio</h1>
+
+                    <h2>Duncan Nasasira</h2>
+
+                    <h3>
+                        Inspiring Learning Through
+                        Education and Technology
+                    </h3>
+
+                    <p>
+                        Hello! I am Duncan Nasasira,
+                        an educator passionate about
+                        Mathematics, Computer Studies,
+                        and using technology to improve
+                        learning.
+                    </p>
+
+                    <p>
+                        With a background in Mathematics
+                        and Computer Education and
+                        experience in computer laboratory
+                        management, I strive to develop
+                        practical digital solutions that
+                        support educators, empower learners,
+                        and improve education in Uganda.
+                    </p>
+
+                    <div class="buttons">
+
+                        <a class="button" href="#projects">
+                            Explore My Work
+                        </a>
+
+                        <a class="button secondary"
+                           href="#contact">
+                            Contact Me
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- YOUR SHIRT AND TIE PHOTO -->
+
+                <img
+                    class="hero-portrait"
+                    src="images/profile.jpg"
+                    alt="Duncan Nasasira wearing a shirt and tie">
+
+                <!-- PROFESSIONAL HIGHLIGHTS -->
+
+                <div class="highlights">
+
+                    <div class="highlight">
+
+                        <span class="highlight-icon">
+                            🎓
+                        </span>
+
+                        <div>
+                            <strong>Educator</strong>
+                            <small>
+                                Mathematics &amp; ICT Teacher
+                            </small>
+                        </div>
+
+                    </div>
+
+                    <div class="highlight">
+
+                        <span class="highlight-icon">
+                            🖥️
+                        </span>
+
+                        <div>
+                            <strong>Tech Enthusiast</strong>
+                            <small>
+                                Web Development &amp; Databases
+                            </small>
+                        </div>
+
+                    </div>
+
+                    <div class="highlight">
+
+                        <span class="highlight-icon">
+                            💡
+                        </span>
+
+                        <div>
+                            <strong>Innovator</strong>
+                            <small>
+                                Creating Solutions for Schools
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================
+             ABOUT ME SECTION
+        ===================================== -->
+
+        <section class="section" id="about">
+
+            <div class="container card about-grid">
+
+                <!-- YOUR PHOTO BESIDE THE CAR -->
+
+                <img
+                    class="about-photo"
+                    src="images/about-me.png"
+                    alt="Duncan Nasasira in formal attire standing beside a car">
+
+                <div class="about-copy">
+
+                    <h2 class="section-title">
+                        About Me
+                    </h2>
+
+                    <p>
+                        My name is Duncan Nasasira,
+                        an educator with a background
+                        in Mathematics and Computer
+                        Education and a strong passion
+                        for teaching, technology,
+                        innovation, and lifelong learning.
+                    </p>
+
+                    <p>
+                        I currently teach Mathematics
+                        and Information and Communication
+                        Technology (ICT), helping learners
+                        develop analytical thinking,
+                        problem-solving abilities,
+                        digital literacy, and practical
+                        skills they can apply in everyday life.
+                    </p>
+
+                    <p>
+                        In addition to my teaching
+                        responsibilities, I serve as a
+                        Computer Laboratory Attendant
+                        at Kabale Secondary School,
+                        where I support the effective
+                        use, organisation, and maintenance
+                        of computer laboratory resources.
+                    </p>
+
+                    <p>
+                        This experience has strengthened
+                        my interest in computer systems,
+                        laboratory management,
+                        information technology, and
+                        developing digital solutions
+                        that improve the delivery of education.
+                    </p>
+
+                    <div class="interest-panel">
+
+                        <h3>
+                            My Professional Interests
+                        </h3>
+
+                        <div class="interests">
+
+                            <span>🌐 Web Development</span>
+
+                            <span>🐍 Python Programming</span>
+
+                            <span>🗄️ SQL and Databases</span>
+
+                            <span>📖 Educational Technology</span>
+
+                            <span>
+                                🖥️ Computer Lab Management
+                            </span>
+
+                            <span>
+                                ⚙️ Digital Systems for Schools
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================
+             CAREER GOALS SECTION
+        ===================================== -->
+
+        <section class="section" id="goals">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    My Career Goals
+                </h2>
+
+                <div class="goals">
+
+                    <article class="card goal">
+
+                        <span class="symbol">🎯</span>
+
+                        <h3>
+                            Excellence in Education
+                        </h3>
+
+                        <p>
+                            To become an innovative
+                            educator who inspires learners
+                            and promotes practical,
+                            learner-centred education.
+                        </p>
+
+                    </article>
+
+                    <article class="card goal">
+
+                        <span class="symbol">🖥️</span>
+
+                        <h3>
+                            Technology Integration
+                        </h3>
+
+                        <p>
+                            To integrate ICT into Mathematics
+                            and other learning activities,
+                            helping students develop creativity
+                            and digital confidence.
+                        </p>
+
+                    </article>
+
+                    <article class="card goal">
+
+                        <span class="symbol">💻</span>
+
+                        <h3>
+                            Software Development
+                        </h3>
+
+                        <p>
+                            To develop useful digital systems
+                            for schools, including computer
+                            laboratory and student result
+                            management systems.
+                        </p>
+
+                    </article>
+
+                    <article class="card goal">
+
+                        <span class="symbol">👥</span>
+
+                        <h3>
+                            Educational Leadership
+                        </h3>
+
+                        <p>
+                            To contribute to educational
+                            innovation and initiatives
+                            that promote quality education
+                            and real-life skills.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================
+             SKILLS SECTION
+        ===================================== -->
+
+        <section class="section" id="skills">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    My Skills
+                </h2>
+
+                <div class="skills">
+
+                    <article class="card skill">
+
+                        <span class="symbol">▦</span>
+
+                        <h3>
+                            Mathematics Education
+                        </h3>
+
+                        <p>
+                            Teaching Mathematics and
+                            developing analytical thinking.
+                        </p>
+
+                    </article>
+
+                    <article class="card skill">
+
+                        <span class="symbol">💻</span>
+
+                        <h3>
+                            Computer Studies
+                        </h3>
+
+                        <p>
+                            Teaching computer applications
+                            and digital literacy.
+                        </p>
+
+                    </article>
+
+                    <article class="card skill">
+
+                        <span class="symbol">🌐</span>
+
+                        <h3>
+                            Web Development
+                        </h3>
+
+                        <p>
+                            Designing and building responsive
+                            websites using HTML and CSS.
+                        </p>
+
+                    </article>
+
+                    <article class="card skill">
+
+                        <span class="symbol">🐍</span>
+
+                        <h3>
+                            Python Programming
+                        </h3>
+
+                        <p>
+                            Developing programming knowledge
+                            and practical software solutions.
+                        </p>
+
+                    </article>
+
+                    <article class="card skill">
+
+                        <span class="symbol">🗄️</span>
+
+                        <h3>
+                            SQL and Database Management
+                        </h3>
+
+                        <p>
+                            Creating, managing, querying
+                            and retrieving information
+                            from databases.
+                        </p>
+
+                    </article>
+
+                    <article class="card skill">
+
+                        <span class="symbol">⚙️</span>
+
+                        <h3>
+                            Computer Lab Management
+                        </h3>
+
+                        <p>
+                            Supporting the organisation,
+                            maintenance and effective use
+                            of computer laboratory resources.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================
+             FEATURED PROJECTS SECTION
+        ===================================== -->
+
+        <section class="section" id="projects">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    My Featured Projects
+                </h2>
+
+                <div class="projects">
+
+                    <!-- PROJECT 1 -->
+
+                    <article class="card project">
+
+                        <img
+                            src="images/inventory.png"
+                            alt="Kabale Secondary School computer laboratory inventory dashboard">
+
+                        <h3>
+                            Computer Laboratory
+                            Management System
+                        </h3>
+
+                        <p>
+                            An inventory and management
+                            project for tracking computer
+                            equipment, conditions,
+                            maintenance and laboratory
+                            resources.
+                        </p>
+
+                        <span class="status">
+                            In Progress
+                        </span>
+
+                    </article>
+
+                    <!-- PROJECT 2 -->
+
+                    <article class="card project">
+
+                        <img
+                            src="images/portfolio-project.png"
+                            alt="My portfolio website in Visual Studio Code and browser preview">
+
+                        <h3>
+                            Educational Portfolio Website
+                        </h3>
+
+                        <p>
+                            A personal website showcasing
+                            my teaching experience,
+                            educational interests,
+                            professional skills and
+                            technology-related projects.
+                        </p>
+
+                        <span class="status">
+                            In Progress
+                        </span>
+
+                    </article>
+
+                    <!-- PROJECT 3 -->
+
+                    <article class="card project">
+
+                        <div class="project-placeholder">
+
+                            <div>
+
+                                <span class="symbol">
+                                    📊
+                                </span>
+
+                                <strong>
+                                    Student Result Management
+                                </strong>
+
+                                <p>Planned Project</p>
+
+                            </div>
+
+                        </div>
+
+                        <h3>
+                            Student Result
+                            Management System
+                        </h3>
+
+                        <p>
+                            A planned system for recording
+                            students' marks, calculating
+                            totals and grades, ranking
+                            learners and generating
+                            academic reports.
+                        </p>
+
+                        <span class="status planned">
+                            Planned
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================
+             CONTACT ME SECTION
+             TWO COLUMNS ON DESKTOP
+        ===================================== -->
+
+        <section class="section" id="contact">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Contact Me
+                </h2>
+
+                <p class="contact-intro">
+                    Have a question, collaboration opportunity,
+                    or project in mind?
+                    Feel free to get in touch.
+                </p>
+
+                <div class="contact-grid">
+
+                    <!-- LEFT CONTACT COLUMN -->
+
+                    <div class="card contact-box">
+
+                        <h3>Get in Touch</h3>
+
+                        <div class="contact-row">
+
+                            <span class="symbol">✉️</span>
+
+                            <div>
+
+                                <strong>Email Address</strong>
+
+                                <a href="mailto:nasasiraduncan416@gmail.com">
+                                    nasasiraduncan416@gmail.com
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="contact-row">
+
+                            <span class="symbol">📞</span>
+
+                            <div>
+
+                                <strong>Phone Numbers</strong>
+
+                                <a href="tel:+256763727746">
+                                    0763727746
+                                </a>
+
+                                <br>
+
+                                <a href="tel:+256707145967">
+                                    0707145967
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="contact-row">
+
+                            <span class="symbol">📍</span>
+
+                            <div>
+
+                                <strong>Location</strong>
+
+                                <p>
+                                    Kabale, Uganda |
+                                    Kashongi, Kiruhura, Uganda
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="contact-row">
+
+                            <span class="symbol">💬</span>
+
+                            <div>
+
+                                <strong>WhatsApp</strong>
+
+                                <a href="https://wa.me/256763727746"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+
+                                    Chat with Me on WhatsApp
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT CONTACT COLUMN -->
+
+                    <div class="card contact-box">
+
+                        <h3>
+                            Send Me a Message
+                        </h3>
+
+                        <form
+                            action="https://formspree.io/f/xnppzekz"
+                            method="POST">
+
+                            <label for="name">
+                                Your Name
+                            </label>
+
+                            <input
+                                id="name"
+                                name="name"
+                                type="text"
+                                autocomplete="name"
+                                placeholder="Enter your full name"
+                                required>
+
+                            <label for="email">
+                                Your Email
+                            </label>
+
+                            <input
+                                id="email"
+                                type="email"
+                                name="email"
+                                autocomplete="email"
+                                placeholder="Enter your email address"
+                                required>
+
+                            <label for="message">
+                                Your Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Write your message here..."
+                                required></textarea>
+
+                            <input
+                                type="hidden"
+                                name="_subject"
+                                value="New Message from Duncan Nasasira Portfolio">
+
+                            <button type="submit">
+                                Send Message
+                            </button>
+
+                            <p class="note">
+                                Messages are submitted
+                                through Formspree.
+                            </p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =====================================
+         FOOTER
+    ===================================== -->
+
+    <footer>
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <strong>Duncan Nasasira</strong>
+
+                <small>
+                    Educator | Mathematics and ICT Teacher |
+                    Technology Enthusiast
+                </small>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+
+                <a href="#about">About Me</a>
+
+                <a href="#skills">Skills</a>
+
+                <a href="#projects">Projects</a>
+
+                <a href="#contact">Contact Me</a>
+
+            </div>
+
+            <small>
+                &copy; 2026 Duncan Nasasira.
+                All Rights Reserved.
+            </small>
+
+        </div>
+
+    </footer>
+
+    <!-- =====================================
+         INTERNAL JAVASCRIPT
+         MOBILE NAVIGATION
+    ===================================== -->
+
+    <script>
+
+        const menuButton =
+            document.getElementById("menuButton");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+        menuButton.addEventListener("click", function () {
+
+            const open =
+                navLinks.classList.toggle("open");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                String(open)
+            );
+
+            menuButton.setAttribute(
+                "aria-label",
+                open ? "Close navigation" : "Open navigation"
+            );
+
+            menuButton.textContent =
+                open ? "×" : "☰";
+
+        });
+
+        navLinks.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navLinks.classList.remove("open");
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuButton.setAttribute(
+                    "aria-label",
+                    "Open navigation"
+                );
+
+                menuButton.textContent = "☰";
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
